@@ -1,0 +1,15 @@
+
+Status Codes
+
+200 OK
+301 Moved Permanently
+304 Not Modified
+400 Bad Request
+404 Not Found
+505 HTTP Version Not Supported
+
+Protocol Port
+HTTP     80
+SMTP     25
+DNS      53 (pezzo de fetuso)
+FTP      20 e 21

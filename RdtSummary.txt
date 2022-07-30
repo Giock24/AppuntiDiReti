@@ -1,0 +1,28 @@
+Rdt1.0: affidabilità massima
+- il canale è affidabile e non avviene nessuna perdita di pacchetto;
+- separazione FSM (Finite State Machine);
+- mittente manda, ricevente riceve.
+
+Rdt2.0: canale con errori di bit
+- checksum controlla se c'è un errore;
+- Nessun Errore = ACK (Acknowledgement);
+- Errore Rilevato = NAK (Negative Acknowledgement) ritrasmissione;
+- stop and wait.
+
+Problemi:
+- ACK e NAK possono essere corrotti;
+- duplicazione pacchetto.
+
+Rdt2.1: ACK e NAK corrotti
+- controllo ACK e NAK corrotti;
+- se uno dei due è corrotto ritrasmette;
+- viene aggiunto ad ogni pacchetto una sequenza di numeri,
+  per scartare i pacchetti duplicati;
+
+Rdt2.2: NAK-free protocol
+- uguale a Rdt2.1, l'unica cosa che cambia è il solo utilizzo
+  dell'ACK;
+- avviene una ritrasmissione se arriva un ACK con sequenza
+  del numero del pacchetto sbagliata.
+
+Rdt3.0: canali con errori e perdita
